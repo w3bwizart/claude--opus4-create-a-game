@@ -1,0 +1,31 @@
+{
+  "permissions": {
+    "allow": [
+      "WebFetch(domain:www.builder.io)",
+      "WebFetch(domain:www.index.dev)",
+      "WebFetch(domain:github.com)",
+      "WebFetch(domain:opengameart.org)",
+      "WebFetch(domain:kenney.nl)",
+      "Bash(npm create:*)",
+      "Bash(npx create-vite:*)",
+      "Bash(mv:*)",
+      "Bash(rm:*)",
+      "Bash(npm install)",
+      "Bash(npm install:*)",
+      "Bash(mkdir:*)",
+      "Bash(claude mcp)",
+      "Bash(find:*)",
+      "Bash(npm run test:coverage:*)",
+      "Bash(npm test:*)",
+      "Bash(npx vitest run:*)",
+      "Bash(npm run dev:*)",
+      "Bash(pkill:*)",
+      "Bash(true)",
+      "Bash(npx tsc:*)",
+      "Bash(curl:*)",
+      "Bash(grep:*)",
+      "Bash(taskkill:*)"
+    ],
+    "deny": []
+  }
+}
