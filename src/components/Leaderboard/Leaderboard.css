@@ -1,0 +1,214 @@
+.leaderboard {
+  background: white;
+  border-radius: 20px;
+  padding: 25px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.leaderboard-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+  padding-bottom: 15px;
+  border-bottom: 2px solid #f0f0f0;
+}
+
+.leaderboard-header h2 {
+  margin: 0;
+  font-size: 1.8rem;
+  color: #333;
+}
+
+.leaderboard-close {
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  color: #999;
+  transition: color 0.2s;
+  padding: 5px 10px;
+}
+
+.leaderboard-close:hover {
+  color: #333;
+}
+
+.submit-score-form {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  padding: 20px;
+  border-radius: 15px;
+  margin-bottom: 20px;
+  color: white;
+}
+
+.submit-score-form h3 {
+  margin: 0 0 15px 0;
+  font-size: 1.4rem;
+  text-align: center;
+}
+
+.form-group {
+  display: flex;
+  gap: 10px;
+}
+
+.form-group input {
+  flex: 1;
+  padding: 12px 15px;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  background: rgba(255, 255, 255, 0.9);
+}
+
+.form-group button {
+  padding: 12px 25px;
+  background: rgba(255, 255, 255, 0.2);
+  color: white;
+  border: 2px solid white;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.form-group button:hover:not(:disabled) {
+  background: white;
+  color: #667eea;
+}
+
+.form-group button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.submit-success {
+  background: #4caf50;
+  color: white;
+  padding: 15px;
+  border-radius: 10px;
+  text-align: center;
+  margin-bottom: 20px;
+  font-weight: 600;
+}
+
+.leaderboard-error {
+  background: #f44336;
+  color: white;
+  padding: 15px;
+  border-radius: 10px;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.leaderboard-loading {
+  text-align: center;
+  padding: 40px;
+  color: #666;
+  font-size: 1.1rem;
+}
+
+.leaderboard-empty {
+  text-align: center;
+  padding: 40px;
+  color: #999;
+  font-size: 1.1rem;
+}
+
+.leaderboard-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.leaderboard-table th {
+  text-align: left;
+  padding: 12px;
+  font-weight: 600;
+  color: #666;
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  border-bottom: 2px solid #f0f0f0;
+}
+
+.leaderboard-row {
+  transition: background-color 0.2s;
+}
+
+.leaderboard-row:hover {
+  background-color: #f9f9f9;
+}
+
+.leaderboard-row td {
+  padding: 15px 12px;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.rank-cell {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-weight: bold;
+}
+
+.rank-number {
+  color: #666;
+}
+
+.rank-emoji {
+  font-size: 1.2rem;
+}
+
+.rank-1 {
+  background: linear-gradient(90deg, rgba(255, 215, 0, 0.1) 0%, transparent 100%);
+}
+
+.rank-2 {
+  background: linear-gradient(90deg, rgba(192, 192, 192, 0.1) 0%, transparent 100%);
+}
+
+.rank-3 {
+  background: linear-gradient(90deg, rgba(205, 127, 50, 0.1) 0%, transparent 100%);
+}
+
+.player-name {
+  font-weight: 600;
+  color: #333;
+}
+
+.player-score {
+  font-weight: bold;
+  color: #667eea;
+  font-size: 1.1rem;
+}
+
+.player-date {
+  color: #999;
+  font-size: 0.9rem;
+}
+
+@media (max-width: 768px) {
+  .leaderboard {
+    padding: 20px 15px;
+  }
+  
+  .leaderboard-header h2 {
+    font-size: 1.5rem;
+  }
+  
+  .leaderboard-table {
+    font-size: 0.9rem;
+  }
+  
+  .leaderboard-table th,
+  .leaderboard-row td {
+    padding: 10px 8px;
+  }
+  
+  .player-date {
+    display: none;
+  }
+}

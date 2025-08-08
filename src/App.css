@@ -1,0 +1,164 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.app {
+  min-height: 100vh;
+  background: linear-gradient(180deg, #f4d03f 0%, #e8b923 50%, #d4a017 100%);
+  padding: 20px;
+  position: relative;
+  overflow: hidden;
+}
+
+.app-header {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.app-title {
+  font-size: 3rem;
+  color: #8B4513;
+  text-shadow: 3px 3px 6px rgba(255, 255, 255, 0.5);
+  font-weight: bold;
+  letter-spacing: 2px;
+  animation: bounce 2s ease-in-out infinite;
+  font-family: 'Comic Sans MS', cursive, sans-serif;
+}
+
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+.app-main {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.game-container {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.game-info {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  max-width: 800px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.7);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  padding: 20px;
+  animation: fadeIn 0.3s ease-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.modal-content {
+  max-width: 90%;
+  max-height: 90vh;
+  overflow-y: auto;
+  animation: slideUp 0.3s ease-out;
+}
+
+@keyframes slideUp {
+  from {
+    transform: translateY(30px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.game-over-modal {
+  background: white;
+  border-radius: 20px;
+  padding: 30px;
+  text-align: center;
+}
+
+.game-over-modal h2 {
+  font-size: 2.5rem;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.final-score {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #667eea;
+  margin-bottom: 30px;
+}
+
+.close-game-over {
+  margin-top: 20px;
+  padding: 12px 30px;
+  background: linear-gradient(135deg, #8B4513 0%, #A0522D 100%);
+  color: white;
+  border: none;
+  border-radius: 10px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.close-game-over:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(139, 69, 19, 0.4);
+}
+
+@media (max-width: 768px) {
+  .app {
+    padding: 15px;
+  }
+  
+  .app-title {
+    font-size: 2rem;
+  }
+  
+  .game-info {
+    grid-template-columns: 1fr;
+    gap: 15px;
+  }
+  
+  .game-container {
+    gap: 20px;
+  }
+  
+  .game-over-modal h2 {
+    font-size: 2rem;
+  }
+  
+  .final-score {
+    font-size: 1.5rem;
+  }
+}

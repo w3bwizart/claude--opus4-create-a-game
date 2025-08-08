@@ -1,0 +1,34 @@
+.hammer-cursor {
+  position: fixed;
+  font-size: 2rem;
+  pointer-events: none;
+  z-index: 9999;
+  transform: translate(-50%, -50%) rotate(-45deg);
+  transition: transform 0.1s ease-out;
+  filter: drop-shadow(2px 2px 4px rgba(0, 0, 0, 0.3));
+}
+
+.hammer-swinging {
+  animation: hammer-swing 0.2s ease-out;
+}
+
+@keyframes hammer-swing {
+  0% {
+    transform: translate(-50%, -50%) rotate(-45deg);
+  }
+  50% {
+    transform: translate(-50%, -50%) rotate(-90deg) scale(1.2);
+  }
+  100% {
+    transform: translate(-50%, -50%) rotate(-45deg);
+  }
+}
+
+/* Hide default cursor when playing */
+.game-playing {
+  cursor: none !important;
+}
+
+.game-playing * {
+  cursor: none !important;
+}
